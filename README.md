@@ -83,11 +83,10 @@ npx hardhat node --fork https://api.avax.network/ext/bc/C/rpc
 
 Agora.
 
-** Create()
+<!-- Create()
 This function receives the hashed value of the video from ipfs /filecoin
 
- emit CreatedAgora(tokenCounter, hash)**
- 
+ emit CreatedAgora(tokenCounter, hash) -->
  create(string memory hash)
 
 
@@ -103,58 +102,55 @@ baseTokenURI(hash) {
 
 
 formatTokenURI(tokenURL) {
-  returns film/token metadata
+  returns the token metadata
   }
 
 
 # AGORA MARKET SETTERS
+ AgoraMarket.
 
 
-* **The creator of the video NFT opens an order to sell the created**
-
+<!-- The creator of the video NFT opens an order to sell the created -->
 openOrder(uint256 _tokenId, uint256 _price){
   emits event
 }
 
 
-* **The function is called by the investor willing to pay the entire sum after the creator list the created NFT from agora**
-
+<!-- The function is called by the investor willing to pay the entire sum after the creator list the created NFT from agora -->
 executeOrder(uint256 _orderId){
   emits event
 }
 
 
-* **This function allows the user to cancel an NFT order incase, and maybe fractionalize**
-
+<!-- This function allows the user to cancel an NFT order incase, and maybe fractionalize -->
 cancelOrder(uint256 _orderId){
   emits event
 }
 
 
-## AgoraShare setters
+## AgoraShare   Setters
 
 
-* **share a minted agora Nft token**
+
+<!-- share a minted agora Nft token -->
 
 function shareAgoraNft(uint _tokenId, uint priceinWei) {
   emits event
 }
 
 
-* **Buy part of a shared Video NFT token**
-
+<!-- Buy part of a shared Video NFT token -->
  function buyShares(uint16 _sharedId, uint16 amount) external payable {
    emits event
  }
 
-* **Redeem allows the video NFT owner to redeem the amount invested**
+<!-- Redeem allows the video NFT owner to redeem the amount invested -->
 
 function redeem ( uint _sharedId ) external {}
 
 
 ## AgoraNFT getters
-
-* **returns two seperate arrays fo deploying the payment splitter**
+<!-- it returns two seperate arrays fo deploying the payment splitter
 
 address [] is the array of investors in the particular VIDEO nfT token 
 
